@@ -24,6 +24,6 @@ Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard', function () {
 Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
-Route::resource('/api/carros','App\Http\Controllers\CarroController');
+Route::resource('/api/car','App\Http\Controllers\CarController');
 Route::post('/api/registro', 'App\Http\Controllers\UserController@registro');
 Route::post('/api/acceso', 'App\Http\Controllers\UserController@login');
